@@ -54,35 +54,42 @@ namespace Afry.TollCalculator.Domain.Service
             return totalFee;
         }
 
-        private int GetTollFeeByDate(DateTime date, Vehicle vehicle)
+        private int GetTollFeeByDate(DateTime dateTime, Vehicle vehicle)
         {
-            if (date.IsTollFree() || vehicle.IsTollFree()) 
+            if (dateTime.IsTollFree() || vehicle.IsTollFree()) 
             { 
                 return 0; 
             }
 
-            if (date.IsBetween(new TimeSpan(6, 0, 0), new TimeSpan(6, 29, 59))
-                || date.IsBetween(new TimeSpan(8, 30, 0), new TimeSpan(14, 59, 0))
-                || date.IsBetween(new TimeSpan(18, 0, 0), new TimeSpan(18, 29, 0)))
-            {
+            // 6.00 - 6.30 am
+            if (dateTime.IsBetween(new TimeSpan(6, 0, 0), new TimeSpan(6, 29, 59)))
                 return 8;
-            }
-            else if (date.IsBetween(new TimeSpan(6, 30, 0), new TimeSpan(6, 59, 0))
-                || date.IsBetween(new TimeSpan(8, 0, 0), new TimeSpan(8, 29, 0))
-                || date.IsBetween(new TimeSpan(15, 0, 0), new TimeSpan(15, 29, 0))
-                || date.IsBetween(new TimeSpan(17, 0, 0), new TimeSpan(17, 59, 0)))
-            {
+            // 6.30 - 7.00 am
+            else if (dateTime.IsBetween(new TimeSpan(6, 30, 0), new TimeSpan(6, 59, 59)))
                 return 13;
-            }
-            else if (date.IsBetween(new TimeSpan(7, 0, 0), new TimeSpan(7, 59, 0))
-                || date.IsBetween(new TimeSpan(15, 30, 0), new TimeSpan(16, 59, 0)))
-            {
+            // 7.00 - 8.00 am
+            else if (dateTime.IsBetween(new TimeSpan(7, 0, 0), new TimeSpan(7, 59, 59)))
                 return 18;
-            }
+            // 8.00 - 8.30 am
+            else if (dateTime.IsBetween(new TimeSpan(8, 0, 0), new TimeSpan(8, 29, 59)))
+                return 13;
+            // 8.30 - 3.00 pm
+            else if (dateTime.IsBetween(new TimeSpan(8, 30, 0), new TimeSpan(14, 59, 59)))
+                return 8;
+            // 3.00 - 3.30 pm
+            else if (dateTime.IsBetween(new TimeSpan(15, 0, 0), new TimeSpan(15, 29, 59)))
+                return 13;
+            // 3.30 - 5.00 pm
+            else if (dateTime.IsBetween(new TimeSpan(15, 30, 0), new TimeSpan(16, 59, 59)))
+                return 18;
+            // 5.00 - 6.00 pm
+            else if (dateTime.IsBetween(new TimeSpan(17, 0, 0), new TimeSpan(17, 59, 59)))
+                return 13;
+            // 6.00 - 6.30 pm
+            else if(dateTime.IsBetween(new TimeSpan(18, 0, 0), new TimeSpan(18, 29, 59)))
+                return 8;
             else
-            {
                 return 0;
-            }
         }
     }
 }

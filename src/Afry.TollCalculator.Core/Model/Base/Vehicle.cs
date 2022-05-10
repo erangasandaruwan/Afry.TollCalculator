@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Afry.TollCalculator.Core.Model
+﻿namespace Afry.TollCalculator.Core.Model
 {
     public abstract class Vehicle: ITollable
     {

@@ -9,7 +9,7 @@ namespace Afry.TollCalculator.Core.Extension
     {
         public static bool IsTollFree(this Vehicle vehicle)
         {
-            return vehicle.IsTollable();
+            return !vehicle.IsTollable();
         }
     } 
 }

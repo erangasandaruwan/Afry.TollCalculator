@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B86BEA3B-03F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2C456D62-E9C4-4CA0-8AA0-BC042BC54E89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Afry.TollCalculator.UnitTest", "tests\Afry.TollCalculator.UnitTest\Afry.TollCalculator.UnitTest.csproj", "{9F27955C-57BC-4292-BD50-C021F6DD7BE7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Afry.TollCalculator.Core", "src\Afry.TollCalculator.Core\Afry.TollCalculator.Core.csproj", "{3AB12B36-2CBD-4608-ADE2-CE28591525C6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Afry.TollCalculator.Domain", "src\Afry.TollCalculator.Domain\Afry.TollCalculator.Domain.csproj", "{598CBB5E-309E-47CD-BB9E-3B73058DA803}"
@@ -17,16 +15,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Afry.TollCalculator.Applica
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Afry.TollCalculator.Api", "src\Afry.TollCalculator.Api\Afry.TollCalculator.Api.csproj", "{BE42EBEA-B12C-4014-82C4-0A03E33DA2F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afry.TollCalculator.UnitTest", "tests\Afry.TollCalculator.UnitTest\Afry.TollCalculator.UnitTest.csproj", "{291F0984-9D2B-4903-8B70-CA7AB1FCDCDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9F27955C-57BC-4292-BD50-C021F6DD7BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F27955C-57BC-4292-BD50-C021F6DD7BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F27955C-57BC-4292-BD50-C021F6DD7BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F27955C-57BC-4292-BD50-C021F6DD7BE7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3AB12B36-2CBD-4608-ADE2-CE28591525C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3AB12B36-2CBD-4608-ADE2-CE28591525C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AB12B36-2CBD-4608-ADE2-CE28591525C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,16 +39,20 @@ Global
 		{BE42EBEA-B12C-4014-82C4-0A03E33DA2F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE42EBEA-B12C-4014-82C4-0A03E33DA2F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE42EBEA-B12C-4014-82C4-0A03E33DA2F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291F0984-9D2B-4903-8B70-CA7AB1FCDCDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291F0984-9D2B-4903-8B70-CA7AB1FCDCDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291F0984-9D2B-4903-8B70-CA7AB1FCDCDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291F0984-9D2B-4903-8B70-CA7AB1FCDCDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9F27955C-57BC-4292-BD50-C021F6DD7BE7} = {2C456D62-E9C4-4CA0-8AA0-BC042BC54E89}
 		{3AB12B36-2CBD-4608-ADE2-CE28591525C6} = {B86BEA3B-03F8-4FD6-B53D-EEDC1F8C54B3}
 		{598CBB5E-309E-47CD-BB9E-3B73058DA803} = {B86BEA3B-03F8-4FD6-B53D-EEDC1F8C54B3}
 		{0203937D-B150-42AA-9535-0B2A74E33D39} = {B86BEA3B-03F8-4FD6-B53D-EEDC1F8C54B3}
 		{BE42EBEA-B12C-4014-82C4-0A03E33DA2F1} = {B86BEA3B-03F8-4FD6-B53D-EEDC1F8C54B3}
+		{291F0984-9D2B-4903-8B70-CA7AB1FCDCDC} = {2C456D62-E9C4-4CA0-8AA0-BC042BC54E89}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {262A2FAF-524B-4FAA-AFA7-66C2C2692AF9}
